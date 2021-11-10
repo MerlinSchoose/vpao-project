@@ -1,0 +1,28 @@
+2) 2. OpenCV permet de corriger la perspective grâce au couple de fonctions
+      findHomography() et perspectiveTransform. Les source points
+      correspondent aux points de l'image original à mapper en un carré crée
+      par les target points sur l'image résultat.
+
+   4. Cf question 2.
+
+3) 6. Cf MLRF
+
+   7. À des correspondances de keypoints entre l'image d'origine et l'image
+      traitée.
+
+   14. On observe que les résultats sont extrêmement bruités, et que les formes
+       proposées changent quasiment à chaque frames. On pourrait prendre une
+       moyenne sur les derniers résultats pour éviter ces changements brusques
+       et donc stabiliser les résultats.
+
+   15. accumulateWeighted accumule les derniers résultats détectés et effectue
+       une moyenne sur ces derniers.
+
+   16. matchingRatio modifie le nombre de matches conservés, minimumMatches
+       modifie le nombre de matches nécessaires pour afficher la détection
+       de formes et enfin accumulationWeight modifie la quantité de résultats
+       conservés pour faire la moyenne.
+
+   19. Perspective-n-Point est le problème de l'estimation de la position d'une
+       caméra calibrée étant donné un ensemble de n points 3D dans le monde et
+       leurs projections 2D correspondantes dans l'image.

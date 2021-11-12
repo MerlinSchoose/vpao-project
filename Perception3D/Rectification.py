@@ -172,11 +172,13 @@ class StereoRectification:
             rectLeft, rectRight = self.rectify(left, right)
             
             # Construct the stereo object here (StereoBM_create)
+            stereo = cv.StereoBM_create(numDisparities, blockSize)
             
             stereo.setMinDisparity(1)
             stereo.setUniquenessRatio(uniquenessRatio)
             
             # Compute the disparity here
+            disparity = stereo.compute(rectLeft, rectRight)
             
             minVal, maxVal, minLoc, maxLoc = cv.minMaxLoc(disparity)
             display = cv.convertScaleAbs(disparity, alpha = (255.0 / maxVal - minVal))

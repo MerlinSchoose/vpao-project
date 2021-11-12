@@ -22,3 +22,4 @@ left = cv.imread('data/stereo/MinnieRawLeft.png', cv.IMREAD_GRAYSCALE)
 right = cv.imread('data/stereo/MinnieRawRight.png', cv.IMREAD_GRAYSCALE)
 
 rectification.display(left, right)
+rectification.displayDisparity(left, right)
